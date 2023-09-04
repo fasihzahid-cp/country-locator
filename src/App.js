@@ -48,6 +48,8 @@ function App() {
   //   setSelectedCountry(check)
   // } // this was working fine but doesn't seem like a good
 
+  
+  
   //could,t handle toggle functionality so that's why went with second approach
 
   
