@@ -6,11 +6,14 @@ import {
   UserOutlined,
   VideoCameraOutlined,
 } from '@ant-design/icons';
+import Typography from '@mui/material/Typography';
+import { useLocation } from 'react-router-dom';
 import { Layout, Menu, Button, theme } from 'antd';
 
 const { Header, Sider, Content } = Layout;
 
 const Sidebar = () => {
+  const { state } = useLocation();
   const [collapsed, setCollapsed] = useState(false);
   const {
     token: { colorBgContainer },
@@ -45,7 +48,7 @@ const Sidebar = () => {
         />
       </Sider>
       <Layout>
-        <Header style={{ padding: 0, background: colorBgContainer }}>
+        <Header style={{ padding: 0, backgroundColor: "#001529" , height: "80px", display:"flex", flexDirection:"row", justifyContent: "space-between"}}>
           <Button
             type="text"
             icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
@@ -54,8 +57,12 @@ const Sidebar = () => {
               fontSize: '16px',
               width: 64,
               height: 64,
+              color: 'white',
+              backgroundColor: '#0d6efd',
+              margin: '5px'
             }}
           />
+              <span style={{ fontSize: "30px" , color: "white", marginRight: "10px" }}>  {state ? state?.name : ''} {state ? state?.flag : ''} </span>
         </Header>
         <Content
           style={{
