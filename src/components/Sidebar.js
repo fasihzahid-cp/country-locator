@@ -22,7 +22,7 @@ const Sidebar = () => {
   return (
     <Layout style={{ minHeight: '100vh' }}>
       <Sider trigger={null} collapsible collapsed={collapsed}>
-        <div className="demo-logo-vertical" />
+        <div className="demo-logo-vertical" style={{backgroundColor: "#001529"}} />
         <img src='logo512.png' style={{ height: "75px", margin: "5px"}}/>
         <Menu
           theme="dark"
@@ -32,17 +32,17 @@ const Sidebar = () => {
             {
               key: '1',
               icon: <UserOutlined />,
-              label: 'nav 1',
+              label: 'State',
             },
             {
               key: '2',
               icon: <VideoCameraOutlined />,
-              label: 'nav 2',
+              label: 'City',
             },
             {
               key: '3',
               icon: <UploadOutlined />,
-              label: 'nav 3',
+              label: 'Place',
             },
           ]}
         />
@@ -69,7 +69,6 @@ const Sidebar = () => {
             margin: '24px 16px',
             padding: 24,
             minHeight: 280,
-            background: colorBgContainer,
           }}
         >
           Content
